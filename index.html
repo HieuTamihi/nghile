@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đếm Ngược Ngày Lễ Việt Nam | Lịch Sự Kiện Chấm Com</title>
+    <!-- SEO Best Practices -->
+    <meta name="description" content="Trải nghiệm đếm ngược trực tuyến đến các ngày lễ lớn trong năm tại Việt Nam. Theo dõi thời gian đếm ngược chính xác, hình ảnh đẹp và thông tin hữu ích về văn hoá lễ hội.">
+    <meta name="keywords" content="đếm ngược ngày lễ, ngày lễ việt nam, lịch nghỉ lễ, tết nguyên đán, giỗ tổ hùng vương, 30/4, quốc khánh 2/9">
+    
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts for modern typography with Vietnamese support -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Animated background for light theme -->
+    <div class="background" aria-hidden="true">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+        <div class="shape shape-4"></div>
+    </div>
+    
+    <header class="main-header">
+        <h1 class="main-title">Ngày Lễ Việt Nam</h1>
+        <p class="main-subtitle">Sự kiện sắp tới</p>
+    </header>
+
+    <main class="container">
+        <!-- Vị trí trung tâm cho sự kiện sắp tới gần nhất -->
+        <section id="featured-holiday" class="featured-section" aria-label="Sự kiện sắp tới gần nhất">
+            <!-- Featured Card injected by JS -->
+        </section>
+
+        <hr class="section-divider">
+
+        <h2 class="section-title">Các sự kiện tiếp theo trong năm</h2>
+
+        <!-- Danh sách các sự kiện còn lại -->
+        <section class="holidays-grid" id="holidays-grid" aria-label="Tất cả các ngày lễ">
+            <!-- Cards will be dynamically injected here by JS -->
+        </section>
+        
+        <!-- Nội dung SEO giúp thoả mãn điều kiện Google AdSense -->
+        <article class="seo-content">
+            <h2>Ý nghĩa của các ngày nghỉ lễ</h2>
+            <p>Những ngày nghỉ lễ là khoảng thời gian quý báu trong năm để mọi người tạm gác lại những bộn bề, lo toan của công việc và học tập. Đây là lúc chúng ta được thư giãn, nạp lại năng lượng và làm những điều mình yêu thích.</p>
+            
+            <div class="article-grid">
+                <div class="article-block">
+                    <h3>Dành thời gian cho gia đình 🤗</h3>
+                    <p>Cuộc sống bận rộn hối hả đôi khi khiến chúng ta lỡ mất những khoảnh khắc bên những người thân yêu. Các dịp lễ chính là cơ hội tuyệt vời để cả nhà quây quần bên các mâm cơm ấm cúng, chia sẻ những câu chuyện và gắn kết tình cảm gia đình hơn bao giờ hết.</p>
+                </div>
+                
+                <div class="article-block">
+                    <h3>Lên kế hoạch du lịch ✈️</h3>
+                    <p>Những kỳ nghỉ lễ dài ngày luôn là thời điểm lý tưởng cho các chuyến du lịch khám phá. Dù là những bãi biển đầy nắng gió, những vùng núi cao hùng vĩ hay đơn giản là một khu nghỉ dưỡng yên tĩnh gần thành phố, các chuyến đi luôn mang lại những kỷ niệm đẹp đẽ khó quên.</p>
+                </div>
+                
+                <div class="article-block">
+                    <h3>Chăm sóc bản thân 🌿</h3>
+                    <p>Ngày lễ đôi khi chỉ đơn giản là tự thưởng cho mình những giây phút yên bình. Bạn có thể dành trọn vẹn cả ngày để đọc một cuốn sách hay, cày bộ phim yêu thích, đi spa thư giãn hay có một giấc ngủ thật ngon mà không cần bận tâm đến tiếng chuông báo thức.</p>
+                </div>
+                
+                <div class="article-block">
+                    <h3>Phát triển kỹ năng mới 💡</h3>
+                    <p>Nếu bạn không thích những nơi đông người vào dịp lễ, đây chính là thời gian tĩnh lặng tuyệt vời để đầu tư vào bản thân. Thử nghiệm nấu một món ăn mới mẻ, học thêm một vài từ vựng ngoại ngữ hay bắt tay vào viết chiếc blog đầu tiên đều là những hoạt động rất bổ ích và đầy ý nghĩa.</p>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <!-- Footer tiêu chuẩn cho AdSense -->
+    <footer class="site-footer">
+        <div class="footer-bottom">
+            <p>&copy; <span id="current-year"></span> Đếm Ngược Ngày Lễ Việt Nam. Mọi quyền được bảo lưu.</p>
+            <div class="footer-links">
+                <a href="#about">Về chúng tôi</a>
+                <a href="#privacy">Chính sách bảo mật</a>
+                <a href="#terms">Điều khoản sử dụng</a>
+                <a href="#contact">Liên hệ</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
