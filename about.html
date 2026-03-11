@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Về chúng tôi | Đếm Ngược Ngày Lễ Việt Nam</title>
+    <!-- SEO Best Practices -->
+    <meta name="description" content="Khám phá sứ mệnh và tính năng của trang web Đếm Ngược Ngày Lễ Việt Nam. Nơi cung cấp công cụ đếm ngược chính xác và trực quan nhất.">
+    <meta name="keywords" content="về chúng tôi, đếm ngược ngày lễ, giới thiệu đếm ngược, ngày lễ việt nam">
+    
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    
+    <style>
+        .page-content {
+            margin-top: 2rem;
+            padding: 3rem;
+            background: var(--glass-bg);
+            border-radius: 24px;
+            box-shadow: var(--glass-shadow);
+            color: var(--text-dark);
+            line-height: 1.8;
+            backdrop-filter: blur(20px);
+            width: 100%;
+            max-width: 800px;
+        }
+        .page-content h1 {
+            font-size: 2.2rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary);
+            text-align: center;
+        }
+        .page-content h2 {
+            font-size: 1.5rem;
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--accent);
+        }
+        .page-content p {
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+        .page-content ul {
+            margin-left: 2rem;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+        .page-content li {
+            margin-bottom: 0.5rem;
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 1rem;
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .back-link:hover {
+            color: var(--primary);
+            text-decoration: underline;
+        }
+    </style>
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4878455337844727"
+     crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="background" aria-hidden="true">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+        <div class="shape shape-4"></div>
+    </div>
+    
+    <header class="main-header" style="margin-bottom: 1rem;">
+        <h1 class="main-title" style="font-size: 2.5rem;"><a href="index.html" style="text-decoration: none; color: inherit;">Ngày Lễ Việt Nam</a></h1>
+    </header>
+
+    <main class="container" style="display: flex; flex-direction: column; align-items: center;">
+        <div style="width: 100%; max-width: 800px;">
+            <a href="index.html" class="back-link">&larr; Quay lại trang chủ</a>
+        </div>
+        <article class="page-content">
+            <h1>Về chúng tôi</h1>
+            <p>Chào mừng bạn đến với <strong>Đếm Ngược Ngày Lễ Việt Nam</strong> - nền tảng trực tuyến giúp bạn theo dõi chính xác thời gian còn lại đến các dịp lễ, tết và sự kiện quan trọng trong năm tại Việt Nam.</p>
+            
+            <h2>Sứ mệnh của chúng tôi</h2>
+            <p>Chúng tôi mong muốn mang đến một công cụ đơn giản, đẹp mắt và trực quan để mọi người có thể dễ dàng lên kế hoạch cho những kỳ nghỉ quý giá bên gia đình, người thân và bạn bè. Cuộc sống bận rộn hối hả đôi khi khiến chúng ta quên mất những ngày lễ quan trọng, đó là lý do website này ra đời.</p>
+            
+            <h2>Tính năng nổi bật</h2>
+            <ul>
+                <li>Đếm ngược chính xác đến từng giây cho các ngày lễ Dương lịch và Âm lịch.</li>
+                <li>Giao diện hiện đại, thân thiện, dễ dàng sử dụng trên cả máy tính và điện thoại di động.</li>
+                <li>Hỗ trợ người dùng lưu lại và ghi nhớ các sự kiện đáng chờ đợi nhất trong năm.</li>
+            </ul>
+            
+            <p>Cảm ơn bạn đã tin tưởng và lựa chọn sử dụng dịch vụ của chúng tôi!</p>
+        </article>
+    </main>
+
+    <footer class="site-footer" style="margin-top: 3rem;">
+        <div class="footer-bottom">
+            <p>&copy; <span id="current-year"></span> Đếm Ngược Ngày Lễ Việt Nam. Mọi quyền được bảo lưu.</p>
+            <div class="footer-links">
+                <a href="about.html">Về chúng tôi</a>
+                <a href="privacy.html">Chính sách bảo mật</a>
+                <a href="terms.html">Điều khoản sử dụng</a>
+                <a href="contact.html">Liên hệ</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
