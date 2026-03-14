@@ -178,12 +178,13 @@ function updateCountdowns() {
     });
 }
 
-// Khởi chạy đếm ngược
-renderLayout();
-updateCountdowns();
-
-// Cập nhật mỗi giây
-updateInterval = setInterval(updateCountdowns, 1000);
+// Khởi chạy đếm ngược nếu đang ở trang chủ
+if (document.getElementById('holidays-grid')) {
+    renderLayout();
+    updateCountdowns();
+    // Cập nhật mỗi giây
+    updateInterval = setInterval(updateCountdowns, 1000);
+}
 
 /* ========================================================
    MEMORY MATCH MINIGAME LOGIC

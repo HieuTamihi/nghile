@@ -35,6 +35,20 @@
         <div class="shape shape-4"></div>
     </div>
     
+    <nav class="main-nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img src="img/logo.png" alt="Ngày Lễ Việt Nam Logo" class="logo-img">
+                <span class="logo-text">Lịch Sự Kiện</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Trang chủ</a></li>
+                <li><a href="game.html">Trò chơi</a></li>
+                <li><a href="about.html">Giới thiệu</a></li>
+            </ul>
+        </div>
+    </nav>
+    
     <header class="main-header">
         <h1 class="main-title">Ngày Lễ Việt Nam</h1>
         <p class="main-subtitle">Sự kiện sắp tới</p>
@@ -55,33 +69,7 @@
             <!-- Cards will be dynamically injected here by JS -->
         </section>
 
-        <hr class="section-divider">
-        
-        <!-- Minigame Lật Hình Ngày Lễ -->
-        <section id="minigame" class="game-section">
-            <h2 class="section-title">Lật Hình Ngày Lễ 🎯</h2>
-            <p style="text-align: center; color: var(--text-muted); margin-bottom: 2rem;">Thử tài trí nhớ trong lúc chờ đợi các ngày lễ sắp tới nhé!</p>
-            
-            <div class="game-controls">
-                <div class="game-stats">
-                    <span id="flips-count">Số bước: 0</span>
-                    <span id="timer">Thời gian: 0s</span>
-                </div>
-                <button id="restart-btn" class="glass-btn">Chơi Lại</button>
-            </div>
-
-            <div class="memory-board" id="memory-board">
-                <!-- Thẻ bài sẽ được tạo bằng JS -->
-            </div>
-            
-            <div id="win-message" class="win-message hidden">
-                <h3>🎉 Chúc Mừng Bạn Đã Hoàn Thành! 🎉</h3>
-                <p>Bạn đã hoàn thành trong <span id="final-time">0</span>s với <span id="final-flips">0</span> bước.</p>
-                <button id="play-again-btn" class="glass-btn primary-btn">Chơi Thêm Lần Nữa</button>
-            </div>
-        </section>
-        
-        <hr class="section-divider">
+        <!-- minigame was moved to game.html -->
         
         <!-- Nội dung SEO giúp thoả mãn điều kiện Google AdSense gốc và mang lại giá trị thực cho người đọc -->
         <article class="seo-content" aria-labelledby="seo-heading">

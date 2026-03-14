@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WPCNY80R5B"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'G-WPCNY80R5B');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trò Chơi Lật Hình Ngày Lễ | Lịch Sự Kiện Chấm Com</title>
+    <!-- SEO Best Practices -->
+    <meta name="description" content="Thử tài trí nhớ với trò chơi lật hình các biểu tượng ngày lễ truyền thống Việt Nam. Giải trí thú vị trong lúc chờ đợi kỳ nghỉ lễ sắp tới.">
+    <meta name="keywords" content="trò chơi lật hình, minigame ngày lễ, giải trí, memory match, ngày lễ việt nam">
+    
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts for modern typography with Vietnamese support -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4878455337844727"
+     crossorigin="anonymous"></script>
+</head>
+<body id="game-page">
+    <!-- Animated background for light theme -->
+    <div class="background" aria-hidden="true">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+        <div class="shape shape-4"></div>
+    </div>
+    
+    <nav class="main-nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img src="img/logo.png" alt="Ngày Lễ Việt Nam Logo" class="logo-img">
+                <span class="logo-text">Lịch Sự Kiện</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Trang chủ</a></li>
+                <li><a href="game.html" class="active">Trò chơi</a></li>
+                <li><a href="about.html">Giới thiệu</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <header class="main-header" style="margin-bottom: 0;">
+        <h1 class="main-title">Lật Hình Ngày Lễ 🎯</h1>
+        <p class="main-subtitle" style="margin-bottom: 0;">Thử tài trí nhớ trong lúc chờ đợi các ngày lễ sắp tới nhé!</p>
+    </header>
+
+    <main class="container">
+        <!-- Minigame Lật Hình Ngày Lễ -->
+        <section id="minigame" class="game-section">
+            <div class="game-controls">
+                <div class="game-stats">
+                    <span id="flips-count">Số bước: 0</span>
+                    <span id="timer">Thời gian: 0s</span>
+                </div>
+                <button id="restart-btn" class="glass-btn">Chơi Lại</button>
+            </div>
+
+            <div class="memory-board" id="memory-board">
+                <!-- Thẻ bài sẽ được tạo bằng JS -->
+            </div>
+            
+            <div id="win-message" class="win-message hidden">
+                <h3>🎉 Chúc Mừng Bạn Đã Hoàn Thành! 🎉</h3>
+                <p>Bạn đã hoàn thành trong <span id="final-time">0</span>s với <span id="final-flips">0</span> bước.</p>
+                <button id="play-again-btn" class="glass-btn primary-btn">Chơi Thêm Lần Nữa</button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer tiêu chuẩn cho AdSense -->
+    <footer class="site-footer" style="margin-top: 4rem;">
+        <div class="footer-bottom">
+            <p>&copy; <span id="current-year"></span> Đếm Ngược Ngày Lễ Việt Nam. Mọi quyền được bảo lưu.</p>
+            <div class="footer-links">
+                <a href="about.html">Về chúng tôi</a>
+                <a href="privacy.html">Chính sách bảo mật</a>
+                <a href="terms.html">Điều khoản sử dụng</a>
+                <a href="contact.html">Liên hệ</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
