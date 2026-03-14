@@ -54,31 +54,63 @@
         <section class="holidays-grid" id="holidays-grid" aria-label="Tất cả các ngày lễ">
             <!-- Cards will be dynamically injected here by JS -->
         </section>
+
+        <hr class="section-divider">
         
-        <!-- Nội dung SEO giúp thoả mãn điều kiện Google AdSense -->
-        <article class="seo-content">
-            <h2>Ý nghĩa của các ngày nghỉ lễ</h2>
-            <p>Những ngày nghỉ lễ là khoảng thời gian quý báu trong năm để mọi người tạm gác lại những bộn bề, lo toan của công việc và học tập. Đây là lúc chúng ta được thư giãn, nạp lại năng lượng và làm những điều mình yêu thích.</p>
+        <!-- Minigame Lật Hình Ngày Lễ -->
+        <section id="minigame" class="game-section">
+            <h2 class="section-title">Lật Hình Ngày Lễ 🎯</h2>
+            <p style="text-align: center; color: var(--text-muted); margin-bottom: 2rem;">Thử tài trí nhớ trong lúc chờ đợi các ngày lễ sắp tới nhé!</p>
+            
+            <div class="game-controls">
+                <div class="game-stats">
+                    <span id="flips-count">Số bước: 0</span>
+                    <span id="timer">Thời gian: 0s</span>
+                </div>
+                <button id="restart-btn" class="glass-btn">Chơi Lại</button>
+            </div>
+
+            <div class="memory-board" id="memory-board">
+                <!-- Thẻ bài sẽ được tạo bằng JS -->
+            </div>
+            
+            <div id="win-message" class="win-message hidden">
+                <h3>🎉 Chúc Mừng Bạn Đã Hoàn Thành! 🎉</h3>
+                <p>Bạn đã hoàn thành trong <span id="final-time">0</span>s với <span id="final-flips">0</span> bước.</p>
+                <button id="play-again-btn" class="glass-btn primary-btn">Chơi Thêm Lần Nữa</button>
+            </div>
+        </section>
+        
+        <hr class="section-divider">
+        
+        <!-- Nội dung SEO giúp thoả mãn điều kiện Google AdSense gốc và mang lại giá trị thực cho người đọc -->
+        <article class="seo-content" aria-labelledby="seo-heading">
+            <h2 id="seo-heading">Ý nghĩa các ngày lễ lớn trong năm tại Việt Nam</h2>
+            <p>Việt Nam là một quốc gia có bề dày lịch sử và văn hoá lâu đời, thể hiện qua những ngày lễ hội truyền thống và các sự kiện lịch sử trọng đại. Những ngày nghỉ lễ không chỉ là dịp để người lao động, học sinh, sinh viên được nghỉ ngơi, thư giãn mà còn mang đậm ý nghĩa tri ân, tôn vinh và gìn giữ bản sắc dân tộc.</p>
             
             <div class="article-grid">
                 <div class="article-block">
-                    <h3>Dành thời gian cho gia đình 🤗</h3>
-                    <p>Cuộc sống bận rộn hối hả đôi khi khiến chúng ta lỡ mất những khoảnh khắc bên những người thân yêu. Các dịp lễ chính là cơ hội tuyệt vời để cả nhà quây quần bên các mâm cơm ấm cúng, chia sẻ những câu chuyện và gắn kết tình cảm gia đình hơn bao giờ hết.</p>
+                    <h3>Tết Nguyên Đán - Lễ hội truyền thống lớn nhất năm 🌸</h3>
+                    <p><strong>Tết Nguyên Đán</strong> (hay còn gọi là Tết Cả, Tết Ta, Tết Âm lịch) là dịp lễ quan trọng nhất trong văn hóa Việt Nam. Chữ "Tết" xuất phát từ "Tiết" (thời tiết), còn "Nguyên" nghĩa là sự khởi đầu, "Đán" nghĩa là buổi sáng sớm. Tết đánh dấu sự khởi đầu của một năm Âm lịch mới, thường diễn ra vào cuối tháng 1 hoặc đầu tháng 2 Dương lịch.</p>
+                    <p>Ý nghĩa thiêng liêng nhất của ngày Tết là sự <strong>đoàn viên</strong>. Đây là dịp để những người con xa xứ trở về quê hương, quây quần bên gia đình, làm mâm cơm cúng tổ tiên và cùng nhau đón giao thừa. Các phong tục truyền thống như gói bánh chưng, bánh tét, chưng hoa đào (ở miền Bắc), hoa mai (ở miền Nam), mâm ngũ quả và tục lệ mừng tuổi (lì xì) chúc Tết những người lớn tuổi và trẻ em không chỉ mang lại niềm vui mà còn chứa đựng hy vọng về một năm mới an khang, thịnh vượng và may mắn.</p>
                 </div>
                 
                 <div class="article-block">
-                    <h3>Lên kế hoạch du lịch ✈️</h3>
-                    <p>Những kỳ nghỉ lễ dài ngày luôn là thời điểm lý tưởng cho các chuyến du lịch khám phá. Dù là những bãi biển đầy nắng gió, những vùng núi cao hùng vĩ hay đơn giản là một khu nghỉ dưỡng yên tĩnh gần thành phố, các chuyến đi luôn mang lại những kỷ niệm đẹp đẽ khó quên.</p>
+                    <h3>Giỗ Tổ Hùng Vương - Hướng về cội nguồn dân tộc 🥁</h3>
+                    <p>Quốc giỗ <strong>Giỗ Tổ Hùng Vương</strong> diễn ra vào ngày mùng 10 tháng 3 Âm lịch hàng năm. Lễ hội này là dịp linh thiêng để toàn thể người dân Việt Nam, dù ở trong hay ngoài nước, đều hướng về cội nguồn, tưởng nhớ công lao to lớn của các Vua Hùng đã có công dựng nước.</p>
+                    <p>Tính từ năm 2007, Giỗ Tổ Hùng Vương chính thức trở thành ngày nghỉ lễ quốc gia. Hoạt động chính của ngày lễ là Đại lễ dâng hương tại Khu di tích lịch sử Đền Hùng (Phú Thọ). Ngày lễ này nhắc nhở thế hệ trẻ về đạo lý <em>"Uống nước nhớ nguồn"</em>, tinh thần đoàn kết đồng bào và trách nhiệm gìn giữ non sông gấm vóc mà tổ tiên đã dày công gây dựng, theo đúng lời Bác Hồ căn dặn: "Các Vua Hùng đã có công dựng nước, Bác cháu ta phải cùng nhau giữ lấy nước".</p>
                 </div>
                 
                 <div class="article-block">
-                    <h3>Chăm sóc bản thân 🌿</h3>
-                    <p>Ngày lễ đôi khi chỉ đơn giản là tự thưởng cho mình những giây phút yên bình. Bạn có thể dành trọn vẹn cả ngày để đọc một cuốn sách hay, cày bộ phim yêu thích, đi spa thư giãn hay có một giấc ngủ thật ngon mà không cần bận tâm đến tiếng chuông báo thức.</p>
+                    <h3>Ngày Giải Phóng Miền Nam 30/4 & Quốc Tế Lao Động 1/5 🇻🇳</h3>
+                    <p>Ngày 30/4/1975 là một mốc son chói lọi trong lịch sử dân tộc Việt Nam, đánh dấu sự kiện <strong>Giải phóng hoàn toàn miền Nam, thống nhất đất nước</strong>. Ngày lễ này là dịp để tri ân những anh hùng liệt sĩ, những Bà mẹ Việt Nam Anh hùng và toàn thể quân dân đã cống hiến, hy sinh vì nền độc lập, tự do và toàn vẹn lãnh thổ.</p>
+                    <p>Liền kề ngay sau đó là ngày <strong>Quốc tế Lao động 1/5</strong> - ngày lễ kỷ niệm phong trào công nhân quốc tế và tôn vinh những người lao động trên toàn thế giới. Do hai ngày lễ này nằm cạnh nhau nên người dân Việt Nam thường có một kỳ nghỉ dài ngày (kỳ nghỉ lễ 30/4 - 1/5). Đây khoảng thời gian lý tưởng nhất trong năm để các gia đình tổ chức những chuyến du lịch xa, nghỉ dưỡng giải tỏa căng thẳng sau những tháng làm việc vất vả đầu năm.</p>
                 </div>
                 
                 <div class="article-block">
-                    <h3>Phát triển kỹ năng mới 💡</h3>
-                    <p>Nếu bạn không thích những nơi đông người vào dịp lễ, đây chính là thời gian tĩnh lặng tuyệt vời để đầu tư vào bản thân. Thử nghiệm nấu một món ăn mới mẻ, học thêm một vài từ vựng ngoại ngữ hay bắt tay vào viết chiếc blog đầu tiên đều là những hoạt động rất bổ ích và đầy ý nghĩa.</p>
+                    <h3>Ngày Quốc Khánh 2/9 - Khát vọng hòa bình độc lập 🎆</h3>
+                    <p><strong>Ngày Quốc khánh Việt Nam (2/9)</strong> kỷ niệm sự kiện lịch sử trọng đại: Chủ tịch Hồ Chí Minh đọc bản Tuyên ngôn Độc lập tại Quảng trường Ba Đình (Hà Nội) vào ngày 2 tháng 9 năm 1945, chính thức khai sinh ra nước Việt Nam Dân chủ Cộng hòa (nay là nước Cộng hòa Xã hội Chủ nghĩa Việt Nam).</p>
+                    <p>Vào ngày này, đường phố ở khắp mọi miền đất nước đều được trang hoàng lộng lẫy với cờ hoa rực rỡ. Từ năm 2021, người lao động được nghỉ thêm 1 ngày liền kề (trước hoặc sau ngày 2/9), tạo thành một kỳ nghỉ lễ kéo dài, thuận tiện cho việc về quê thăm gia đình hay lên kế hoạch vui chơi giải trí. Ngày 2/9 mang ý nghĩa nhắc nhở sâu sắc về giá trị vô giá của nền độc lập, tự do và khơi dậy lòng tự hào dân tộc trong mỗi người con đất Việt.</p>
                 </div>
             </div>
         </article>

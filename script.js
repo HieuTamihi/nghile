@@ -178,9 +178,170 @@ function updateCountdowns() {
     });
 }
 
-// Khởi chạy
+// Khởi chạy đếm ngược
 renderLayout();
 updateCountdowns();
 
 // Cập nhật mỗi giây
 updateInterval = setInterval(updateCountdowns, 1000);
+
+/* ========================================================
+   MEMORY MATCH MINIGAME LOGIC
+   ======================================================== */
+const cardsArray = [
+    { name: 'tet', icon: 'img/blossom.png' },
+    { name: 'phaohoa', icon: 'img/fireworks.png' },
+    { name: 'duahau', icon: 'img/watermelon.png' },
+    { name: 'lixi', icon: 'img/luckymoney.png' },
+    { name: 'cayneu', icon: 'img/bamboo.png' },
+    { name: 'trong', icon: 'img/drum.png' },
+    { name: 'covn', icon: 'img/star.png' },
+    { name: 'chay', icon: 'img/shoes.png' }
+];
+
+let memoryDeck = [];
+let hasFlippedCard = false;
+let lockBoard = false;
+let firstCard, secondCard;
+let matchedPairs = 0;
+let flips = 0;
+let timer = 0;
+let timerInterval = null;
+let isPlaying = false;
+
+const memoryBoard = document.getElementById('memory-board');
+const flipsCount = document.getElementById('flips-count');
+const timerDisplay = document.getElementById('timer');
+const winMessage = document.getElementById('win-message');
+const restartBtn = document.getElementById('restart-btn');
+const playAgainBtn = document.getElementById('play-again-btn');
+const finalTime = document.getElementById('final-time');
+const finalFlips = document.getElementById('final-flips');
+
+function initGame() {
+    // Reset state
+    hasFlippedCard = false;
+    lockBoard = false;
+    firstCard = null;
+    secondCard = null;
+    matchedPairs = 0;
+    flips = 0;
+    timer = 0;
+    isPlaying = false;
+    
+    clearInterval(timerInterval);
+    flipsCount.textContent = `Số bước: ${flips}`;
+    timerDisplay.textContent = `Thời gian: ${timer}s`;
+    winMessage.classList.add('hidden');
+    memoryBoard.innerHTML = '';
+    
+    // Create and shuffle deck
+    memoryDeck = [...cardsArray, ...cardsArray];
+    memoryDeck.sort(() => 0.5 - Math.random());
+    
+    // Render cards
+    memoryDeck.forEach((cardDesc, index) => {
+        const card = document.createElement('div');
+        card.classList.add('memory-card');
+        card.dataset.name = cardDesc.name;
+        
+        card.innerHTML = `
+            <div class="card-face card-front"><img src="${cardDesc.icon}" alt="${cardDesc.name}"></div>
+            <div class="card-face card-back"></div>
+        `;
+        
+        card.addEventListener('click', flipCard);
+        memoryBoard.appendChild(card);
+    });
+}
+
+function startTimer() {
+    isPlaying = true;
+    timerInterval = setInterval(() => {
+        timer++;
+        timerDisplay.textContent = `Thời gian: ${timer}s`;
+    }, 1000);
+}
+
+function flipCard() {
+    if (!isPlaying) startTimer();
+    if (lockBoard) return;
+    if (this === firstCard) return;
+
+    this.classList.add('flipped');
+
+    if (!hasFlippedCard) {
+        // First click
+        hasFlippedCard = true;
+        firstCard = this;
+        return;
+    }
+
+    // Second click
+    secondCard = this;
+    flips++;
+    flipsCount.textContent = `Số bước: ${flips}`;
+    checkForMatch();
+}
+
+function checkForMatch() {
+    let isMatch = firstCard.dataset.name === secondCard.dataset.name;
+
+    if (isMatch) {
+        disableCards();
+    } else {
+        unflipCards();
+    }
+}
+
+function disableCards() {
+    firstCard.removeEventListener('click', flipCard);
+    secondCard.removeEventListener('click', flipCard);
+    
+    firstCard.classList.add('matched');
+    secondCard.classList.add('matched');
+
+    matchedPairs++;
+    
+    if (matchedPairs === cardsArray.length) {
+        winGame();
+    }
+    
+    resetBoard();
+}
+
+function unflipCards() {
+    lockBoard = true;
+
+    setTimeout(() => {
+        firstCard.classList.remove('flipped');
+        secondCard.classList.remove('flipped');
+        resetBoard();
+    }, 1000);
+}
+
+function resetBoard() {
+    [hasFlippedCard, lockBoard] = [false, false];
+    [firstCard, secondCard] = [null, null];
+}
+
+function winGame() {
+    clearInterval(timerInterval);
+    setTimeout(() => {
+        finalTime.textContent = timer;
+        finalFlips.textContent = flips;
+        winMessage.classList.remove('hidden');
+    }, 500);
+}
+
+// Event Listeners
+restartBtn.addEventListener('click', initGame);
+playAgainBtn.addEventListener('click', initGame);
+
+// Initialize on load
+document.addEventListener('DOMContentLoaded', () => {
+    // Check if memory board exists before init (prevent errors on other pages)
+    if (document.getElementById('memory-board')) {
+        initGame();
+    }
+});
