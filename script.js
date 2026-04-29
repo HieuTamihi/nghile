@@ -336,8 +336,29 @@ function winGame() {
 }
 
 // Event Listeners
-restartBtn.addEventListener('click', initGame);
-playAgainBtn.addEventListener('click', initGame);
+if (restartBtn) restartBtn.addEventListener('click', initGame);
+if (playAgainBtn) playAgainBtn.addEventListener('click', initGame);
+
+// Theme Toggle Logic
+const themeToggle = document.getElementById('theme-toggle');
+const currentTheme = localStorage.getItem('theme');
+
+if (currentTheme) {
+    document.documentElement.setAttribute('data-theme', currentTheme);
+}
+
+if (themeToggle) {
+    themeToggle.addEventListener('click', () => {
+        let theme = document.documentElement.getAttribute('data-theme');
+        if (theme === 'dark') {
+            document.documentElement.setAttribute('data-theme', 'light');
+            localStorage.setItem('theme', 'light');
+        } else {
+            document.documentElement.setAttribute('data-theme', 'dark');
+            localStorage.setItem('theme', 'dark');
+        }
+    });
+}
 
 // Initialize on load
 document.addEventListener('DOMContentLoaded', () => {

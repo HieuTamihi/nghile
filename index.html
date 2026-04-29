@@ -12,22 +12,54 @@
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Đếm Ngược Ngày Lễ Việt Nam | Lịch Sự Kiện Chấm Com</title>
+    <title>Đếm Ngược Ngày Lễ Việt Nam | Lịch Sự Kiện</title>
+    
     <!-- SEO Best Practices -->
     <meta name="description" content="Trải nghiệm đếm ngược trực tuyến đến các ngày lễ lớn trong năm tại Việt Nam. Theo dõi thời gian đếm ngược chính xác, hình ảnh đẹp và thông tin hữu ích về văn hoá lễ hội.">
     <meta name="keywords" content="đếm ngược ngày lễ, ngày lễ việt nam, lịch nghỉ lễ, tết nguyên đán, giỗ tổ hùng vương, 30/4, quốc khánh 2/9">
     
     <link rel="stylesheet" href="style.css">
-    <!-- Google Fonts for modern typography with Vietnamese support -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://lichsukien.com/">
+    <meta property="og:title" content="Đếm Ngược Ngày Lễ Việt Nam | Lịch Sự Kiện">
+    <meta property="og:description" content="Trải nghiệm đếm ngược trực tuyến đến các ngày lễ lớn trong năm tại Việt Nam. Theo dõi thời gian đếm ngược chính xác, hình ảnh đẹp và thông tin hữu ích.">
+    <meta property="og:image" content="https://lichsukien.com/img/banner.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://lichsukien.com/">
+    <meta property="twitter:title" content="Đếm Ngược Ngày Lễ Việt Nam | Lịch Sự Kiện">
+    <meta property="twitter:description" content="Trải nghiệm đếm ngược trực tuyến đến các ngày lễ lớn trong năm tại Việt Nam. Theo dõi thời gian đếm ngược chính xác, hình ảnh đẹp và thông tin hữu ích.">
+    <meta property="twitter:image" content="https://lichsukien.com/img/banner.png">
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Lịch Sự Kiện",
+      "url": "https://lichsukien.com/",
+      "description": "Đếm ngược ngày lễ Việt Nam và thông tin ý nghĩa các ngày lễ trong năm.",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://lichsukien.com/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+
     <!-- Google AdSense -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4878455337844727"
      crossorigin="anonymous"></script>
 </head>
 <body>
-    <!-- Animated background for light theme -->
+    <!-- Animated background -->
     <div class="background" aria-hidden="true">
         <div class="shape shape-1"></div>
         <div class="shape shape-2"></div>
@@ -45,6 +77,12 @@
                 <li><a href="index.html" class="active">Trang chủ</a></li>
                 <li><a href="game.html">Trò chơi</a></li>
                 <li><a href="about.html">Giới thiệu</a></li>
+                <li>
+                    <button id="theme-toggle" class="theme-toggle-btn" aria-label="Chuyển đổi chế độ tối">
+                        <span class="icon-sun">☀️</span>
+                        <span class="icon-moon">🌙</span>
+                    </button>
+                </li>
             </ul>
         </div>
     </nav>
@@ -55,56 +93,50 @@
     </header>
 
     <main class="container">
-        <!-- Vị trí trung tâm cho sự kiện sắp tới gần nhất -->
+        <!-- Featured Holiday -->
         <section id="featured-holiday" class="featured-section" aria-label="Sự kiện sắp tới gần nhất">
-            <!-- Featured Card injected by JS -->
+            <!-- Injected by JS -->
         </section>
 
         <hr class="section-divider">
 
         <h2 class="section-title">Các sự kiện tiếp theo trong năm</h2>
 
-        <!-- Danh sách các sự kiện còn lại -->
+        <!-- Holiday Grid -->
         <section class="holidays-grid" id="holidays-grid" aria-label="Tất cả các ngày lễ">
-            <!-- Cards will be dynamically injected here by JS -->
+            <!-- Injected by JS -->
         </section>
 
-        <!-- minigame was moved to game.html -->
-        
-        <!-- Nội dung SEO giúp thoả mãn điều kiện Google AdSense gốc và mang lại giá trị thực cho người đọc -->
+        <!-- SEO Article Content -->
         <article class="seo-content" aria-labelledby="seo-heading">
-            <h2 id="seo-heading">Ý nghĩa các ngày lễ lớn trong năm tại Việt Nam</h2>
-            <p>Việt Nam là một quốc gia có bề dày lịch sử và văn hoá lâu đời, thể hiện qua những ngày lễ hội truyền thống và các sự kiện lịch sử trọng đại. Những ngày nghỉ lễ không chỉ là dịp để người lao động, học sinh, sinh viên được nghỉ ngơi, thư giãn mà còn mang đậm ý nghĩa tri ân, tôn vinh và gìn giữ bản sắc dân tộc.</p>
+            <h2 id="seo-heading">Khám Phá Văn Hoá & Ý Nghĩa Các Ngày Lễ Việt Nam</h2>
+            <p>Việt Nam là một quốc gia có bề dày lịch sử và văn hoá lâu đời, thể hiện qua những ngày lễ hội truyền thống và các sự kiện lịch sử trọng đại. Những ngày nghỉ lễ không chỉ là dịp để nghỉ ngơi mà còn là cơ hội để gắn kết gia đình, tri ân tổ tiên và tôn vinh những giá trị dân tộc cao quý.</p>
             
             <div class="article-grid">
                 <div class="article-block">
-                    <h3>Tết Nguyên Đán - Lễ hội truyền thống lớn nhất năm 🌸</h3>
-                    <p><strong>Tết Nguyên Đán</strong> (hay còn gọi là Tết Cả, Tết Ta, Tết Âm lịch) là dịp lễ quan trọng nhất trong văn hóa Việt Nam. Chữ "Tết" xuất phát từ "Tiết" (thời tiết), còn "Nguyên" nghĩa là sự khởi đầu, "Đán" nghĩa là buổi sáng sớm. Tết đánh dấu sự khởi đầu của một năm Âm lịch mới, thường diễn ra vào cuối tháng 1 hoặc đầu tháng 2 Dương lịch.</p>
-                    <p>Ý nghĩa thiêng liêng nhất của ngày Tết là sự <strong>đoàn viên</strong>. Đây là dịp để những người con xa xứ trở về quê hương, quây quần bên gia đình, làm mâm cơm cúng tổ tiên và cùng nhau đón giao thừa. Các phong tục truyền thống như gói bánh chưng, bánh tét, chưng hoa đào (ở miền Bắc), hoa mai (ở miền Nam), mâm ngũ quả và tục lệ mừng tuổi (lì xì) chúc Tết những người lớn tuổi và trẻ em không chỉ mang lại niềm vui mà còn chứa đựng hy vọng về một năm mới an khang, thịnh vượng và may mắn.</p>
+                    <h3>Tết Nguyên Đán - Đỉnh cao văn hoá dân tộc 🌸</h3>
+                    <p><strong>Tết Nguyên Đán</strong> là dịp lễ quan trọng nhất, mang đậm nét văn hoá Á Đông. Đây là thời khắc giao thoa giữa năm cũ và năm mới, là dịp để mọi người trở về quê hương sau một năm làm việc vất vả. Các phong tục như cúng tất niên, đón giao thừa, xông đất và mừng tuổi không chỉ mang tính hình thức mà còn chứa đựng khát vọng về một cuộc sống sung túc, bình an.</p>
+                    <p>Trong thời đại số, việc theo dõi thời gian đếm ngược đến Tết giúp tạo thêm không khí náo nức và chuẩn bị kỹ lưỡng hơn cho kỳ nghỉ dài nhất trong năm.</p>
                 </div>
                 
                 <div class="article-block">
-                    <h3>Giỗ Tổ Hùng Vương - Hướng về cội nguồn dân tộc 🥁</h3>
-                    <p>Quốc giỗ <strong>Giỗ Tổ Hùng Vương</strong> diễn ra vào ngày mùng 10 tháng 3 Âm lịch hàng năm. Lễ hội này là dịp linh thiêng để toàn thể người dân Việt Nam, dù ở trong hay ngoài nước, đều hướng về cội nguồn, tưởng nhớ công lao to lớn của các Vua Hùng đã có công dựng nước.</p>
-                    <p>Tính từ năm 2007, Giỗ Tổ Hùng Vương chính thức trở thành ngày nghỉ lễ quốc gia. Hoạt động chính của ngày lễ là Đại lễ dâng hương tại Khu di tích lịch sử Đền Hùng (Phú Thọ). Ngày lễ này nhắc nhở thế hệ trẻ về đạo lý <em>"Uống nước nhớ nguồn"</em>, tinh thần đoàn kết đồng bào và trách nhiệm gìn giữ non sông gấm vóc mà tổ tiên đã dày công gây dựng, theo đúng lời Bác Hồ căn dặn: "Các Vua Hùng đã có công dựng nước, Bác cháu ta phải cùng nhau giữ lấy nước".</p>
+                    <h3>Giỗ Tổ Hùng Vương - Niềm tự hào cội nguồn 🥁</h3>
+                    <p>Cứ mỗi độ tháng Ba âm lịch, người dân Việt Nam lại hướng về Đền Hùng với lòng thành kính. Câu ca dao <em>"Dù ai đi ngược về xuôi / Nhớ ngày Giỗ Tổ mùng mười tháng Ba"</em> đã thấm sâu vào máu thịt bao thế hệ. Đây là ngày lễ ý nghĩa nhất để nhắc nhở về nguồn gốc "Con Rồng Cháu Tiên", khơi dậy tinh thần đoàn kết toàn dân tộc.</p>
                 </div>
                 
                 <div class="article-block">
-                    <h3>Ngày Giải Phóng Miền Nam 30/4 & Quốc Tế Lao Động 1/5 🇻🇳</h3>
-                    <p>Ngày 30/4/1975 là một mốc son chói lọi trong lịch sử dân tộc Việt Nam, đánh dấu sự kiện <strong>Giải phóng hoàn toàn miền Nam, thống nhất đất nước</strong>. Ngày lễ này là dịp để tri ân những anh hùng liệt sĩ, những Bà mẹ Việt Nam Anh hùng và toàn thể quân dân đã cống hiến, hy sinh vì nền độc lập, tự do và toàn vẹn lãnh thổ.</p>
-                    <p>Liền kề ngay sau đó là ngày <strong>Quốc tế Lao động 1/5</strong> - ngày lễ kỷ niệm phong trào công nhân quốc tế và tôn vinh những người lao động trên toàn thế giới. Do hai ngày lễ này nằm cạnh nhau nên người dân Việt Nam thường có một kỳ nghỉ dài ngày (kỳ nghỉ lễ 30/4 - 1/5). Đây khoảng thời gian lý tưởng nhất trong năm để các gia đình tổ chức những chuyến du lịch xa, nghỉ dưỡng giải tỏa căng thẳng sau những tháng làm việc vất vả đầu năm.</p>
+                    <h3>Đại Thắng Mùa Xuân 30/4 & Quốc Tế Lao Động 1/5 🇻🇳</h3>
+                    <p>Ngày 30/4 là biểu tượng của tinh thần bất khuất, khát vọng độc lập và thống nhất non sông. Kết hợp với ngày Quốc tế Lao động 1/5, đây thường là kỳ nghỉ lễ dài thứ hai trong năm. Người dân Việt Nam thường dành thời gian này để đi du lịch, khám phá vẻ đẹp đất nước từ Bắc vào Nam, đồng thời tưởng nhớ những người đã ngã xuống vì độc lập tự do.</p>
                 </div>
                 
                 <div class="article-block">
-                    <h3>Ngày Quốc Khánh 2/9 - Khát vọng hòa bình độc lập 🎆</h3>
-                    <p><strong>Ngày Quốc khánh Việt Nam (2/9)</strong> kỷ niệm sự kiện lịch sử trọng đại: Chủ tịch Hồ Chí Minh đọc bản Tuyên ngôn Độc lập tại Quảng trường Ba Đình (Hà Nội) vào ngày 2 tháng 9 năm 1945, chính thức khai sinh ra nước Việt Nam Dân chủ Cộng hòa (nay là nước Cộng hòa Xã hội Chủ nghĩa Việt Nam).</p>
-                    <p>Vào ngày này, đường phố ở khắp mọi miền đất nước đều được trang hoàng lộng lẫy với cờ hoa rực rỡ. Từ năm 2021, người lao động được nghỉ thêm 1 ngày liền kề (trước hoặc sau ngày 2/9), tạo thành một kỳ nghỉ lễ kéo dài, thuận tiện cho việc về quê thăm gia đình hay lên kế hoạch vui chơi giải trí. Ngày 2/9 mang ý nghĩa nhắc nhở sâu sắc về giá trị vô giá của nền độc lập, tự do và khơi dậy lòng tự hào dân tộc trong mỗi người con đất Việt.</p>
+                    <h3>Quốc Khánh 2/9 - Khai sinh nước Việt Nam mới 🎆</h3>
+                    <p>Bản Tuyên ngôn Độc lập năm 1945 đã mở ra một kỷ nguyên mới cho dân tộc. Ngày Quốc khánh không chỉ là sự kiện chính trị mà còn là ngày hội của lòng yêu nước. Hình ảnh lá cờ đỏ sao vàng tung bay khắp phố phường là minh chứng cho sức sống mãnh liệt và sự trường tồn của một quốc gia hòa bình, đang phát triển mạnh mẽ trên trường quốc tế.</p>
                 </div>
             </div>
         </article>
     </main>
 
-    <!-- Footer tiêu chuẩn cho AdSense -->
     <footer class="site-footer">
         <div class="footer-bottom">
             <p>&copy; <span id="current-year"></span> Đếm Ngược Ngày Lễ Việt Nam. Mọi quyền được bảo lưu.</p>
